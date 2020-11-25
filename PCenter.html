@@ -1,0 +1,82 @@
+<!DOCTYPE html><html>
+<!--代码由www.magicalcoder.com可视化布局器拖拽生成 资源请自行下载到本地-->
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<title>个人中心</title>
+<link href="https://lib.baomitu.com/element-ui/2.10.1/theme-chalk/index.css" rel="stylesheet"/>
+<link href="http://lowcode.magicalcoder.com/magicalcoder/assets/drag/ui/magicalcoder/1.1.0/magicalcoder.css" rel="stylesheet"/>
+<!-- 如果要兼容ie8及以前版本 请打开注释--> <!-- <script src="http://www.magicalcoder.com/assets/ui/element/2.10.1/browser.min.js"></script><script src="http://www.magicalcoder.com/assets/ui/element/2.10.1/browser-polyfill.min.js"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/json3/3.3.3/json3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.6.0/echarts.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.6.0/extension/dataTool.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+<script src="https://lib.baomitu.com/element-ui/2.10.1/index.js"></script>
+<script src="http://www.magicalcoder.com/assets/js/common.js"></script>
+<script src="http://lowcode.magicalcoder.com/magicalcoder/assets/drag/ui/magicalcoder/1.1.0/magicalcoder.js"></script>
+<style>
+
+</style>
+
+</head>
+<body style="">
+<div id="magicalDragScene" class="mc-root mc-ui-absolute-pane"><template>
+	<span class="mc-ui-geometry-char" style="height: 28px; width: 87px; position: absolute; left: 46.5366%; top: 13%; font-size: 20px;">个人中心</span>
+	<el-link style="position: absolute; left: 8.67834%; top: 18.2857%;" v-if="true"><a href="menghu.html" >返回门户网站</a></el-link>
+	<el-tabs style="position: absolute; left: 38.6146%; top: 27.5714%; width: 37.1019%;" value="first" @tab-click="_tabClick">
+		<el-tab-pane name="first" style="height: 291px;" label="通知">通知内容</el-tab-pane>
+		<el-tab-pane name="second" label="考试日期安排">考试相关</el-tab-pane>
+	</el-tabs>
+	<el-menu style="position: absolute; left: 14.8089%; top: 32.5714%; width: 13.4554%;" mode="vertical" :collapse="false" :collapse-transition="true">
+		<el-submenu index="1">
+			<span class="magical-drag-tmp-submenu-name" slot="title">个人信息</span>
+			<el-menu-item index="2-1"><a href="PIS.html"> 个人信息查询</a></el-menu-item>
+			<el-menu-item id="uuid4fe5570e-26d7-4602-9d56-71346fa9eecc" index="uuidae9695fc-8799-42a9-a4ca-a68a2e658742">个人信息修改</el-menu-item>
+			<el-menu-item id="uuid5d09b794-d120-42dc-85da-7c858e63e299" index="uuiddd8a0c73-a4a4-4695-accd-20c047ff456c">我的成绩</el-menu-item>
+		</el-submenu>
+		<el-submenu index="2">
+			<span class="magical-drag-tmp-submenu-name" slot="title">考试相关</span>
+			<el-menu-item id="uuid730b68bc-de7b-4f30-940e-58c31f573c1c" index="uuid6f8ebad0-66a9-48bf-b447-366c979e61d0">考试查询</el-menu-item>
+			<el-menu-item id="uuid967dfa93-cea1-464a-9a23-17351fe84435" index="uuid6b761aea-2a27-4594-bad9-39ae57fa9994">考场查询</el-menu-item>
+			<el-menu-item id="uuid7028cdf8-c470-444a-9c85-d336c3a7ce3f" index="uuid7302e47c-27f8-41ff-b22c-4d16be73db8f"><a href="Exam.html" >报名考试</a></el-menu-item>
+		</el-submenu>
+	</el-menu>
+</template></div>
+<script>
+//ajax库采用axios
+//调试:打开浏览器控制台(F12),在代码中某行增加 debugger 即可调试
+var vueData = {select : "",/*别删我*/
+pageTotal : 100,/*别删我*/
+currentPage : 1};
+var vueMethod = {focus : function (e) {try {_t.fastKey.focusElem(e);}catch(e) {}},/*别删我*/
+_tabClick : function(){setTimeout(function(){new McECharts().render();},200)}};
+var vueMounted = function(){}
+/*注意以上代码由系统维护,非专业人士请勿修改*/
+var myMethod = {}
+for (var key in myMethod) {
+    vueMethod[key] = myMethod[key];
+}
+var myMounted = null
+if(myMounted!==null){vueMounted=myMounted;}
+var myData = {}
+/*把您定义的数据覆盖布局器自动识别的变量,考虑到兼容性，请下载查看head中重写的assign方法*/
+Object.assign(vueData, myData);
+var _t = this;
+var Ctor = Vue.extend({
+    //提前绑定的变量
+    data: function() {
+        return vueData;
+    },
+    //页面加载完 会执行方法 可以做一些初始化操作
+    mounted: vueMounted,
+    /*当前页面绑定的方法集合 与布局器节点一一映射即可 参照element ui文档*/
+    methods: vueMethod
+});
+new Ctor().$mount('#magicalDragScene');
+//echarts自动初始化
+new McECharts().render();
+
+</script>
+</body>
+
+</html>
