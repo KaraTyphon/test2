@@ -2,7 +2,7 @@
 <!--代码由www.magicalcoder.com可视化布局器拖拽生成 资源请自行下载到本地-->
 <head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-<title>个人信息查询</title>
+<title>登录界面</title>
 <link href="https://lib.baomitu.com/element-ui/2.10.1/theme-chalk/index.css" rel="stylesheet"/>
 <link href="http://lowcode.magicalcoder.com/magicalcoder/assets/drag/ui/magicalcoder/1.1.0/magicalcoder.css" rel="stylesheet"/>
 <!-- 如果要兼容ie8及以前版本 请打开注释--> <!-- <script src="http://www.magicalcoder.com/assets/ui/element/2.10.1/browser.min.js"></script><script src="http://www.magicalcoder.com/assets/ui/element/2.10.1/browser-polyfill.min.js"></script>-->
@@ -21,20 +21,24 @@
 </head>
 <body style="">
 <div id="magicalDragScene" class="mc-root mc-ui-absolute-pane"><template>
-	<el-tag class="mc-ui-flex-center" style="position: absolute; left: 44.9841%; top: 10.7143%;">个人信息查询</el-tag>
-	<el-tabs style="position: absolute; left: 27.508%; top: 23.8571%;" value="first" @tab-click="_tabClick" tab-position="left" stretch type="border-card">
-		<el-tab-pane name="first" label="个人信息">姓名 身份证</el-tab-pane>
-		<el-tab-pane name="second" label="我的考试">目前考试：</el-tab-pane>
-		<el-tab-pane id="uuid091f8640-c0ae-414d-93b5-4d6634b5d19d" name="uuida4be531f-c90b-402f-9a43-529d2d33239f" label="我的成绩">历次考试成绩</el-tab-pane>
-		<el-tab-pane id="uuid58c3b27e-b3b7-45ef-9ac9-425da431f9d0" name="uuidbff284d0-7be5-4abf-8751-30753c00e1be" label="准考证">本次考试准考证号：</el-tab-pane>
-		<el-tab-pane id="uuidccacb0a9-ccc1-4320-a00d-7c97e97c9a2d" name="uuid2cc82a7b-b966-4b6c-a766-0dd2c613bf74" label="备用"></el-tab-pane>
-	</el-tabs>
-	<el-link style="position: absolute; left: 13.4554%; top: 25.1429%;" ><a href="PCenter.html">返回个人中心</a></el-link>
+	<i style="position: absolute; left: 20.5414%; top: 18.8571%; font-family: 楷体; font-size: 33px; width: 19.7452%;">考试管理系统</i>
+	<el-input style="position: absolute; left: 47.6115%; top: 33.2857%; width: 25.4777%;" v-model="input" placeholder="请输入的学号/工号"></el-input>
+	<el-input style="position: absolute; left: 47.7707%; top: 43.2857%; width: 25.4777%;" v-model="input" placeholder="请输入你的密码" show-password></el-input>
+	<el-radio-group style="position: absolute; left: 49.7611%; top: 52.8571%; height: 16px;" v-model="radioGroup">
+		<el-radio label="1">学生</el-radio>
+		<el-radio label="2">老师</el-radio>
+		<el-radio id="uuid30b32a75-8944-4e70-b397-467c2b8f0982" label="3">管理员</el-radio>
+	</el-radio-group>
+	<el-button style="position: absolute; left: 48.8076%; top: 60.1429%;">登录</el-button>
+	<a style="position: absolute; left: 50%; top: 56.1429%; width: 17.4363%;" href="Register">没有账户，点击注册</a>
+	<i style="position: absolute; left: 42.5955%; top: 34.6429%; width: 4.85669%;">账户：</i>
+	<i id="uuid06c333dc-624d-4579-911a-3596b593b888" style="position: absolute; left: 42.7548%; top: 44.7857%; width: 4.85669%;">密码：</i>
 </template></div>
 <script>
 //ajax库采用axios
 //调试:打开浏览器控制台(F12),在代码中某行增加 debugger 即可调试
-var vueData = {};
+var vueData = {input : "",/*别删我*/
+radioGroup : ""};
 var vueMethod = {focus : function (e) {try {_t.fastKey.focusElem(e);}catch(e) {}},/*别删我*/
 _tabClick : function(){setTimeout(function(){new McECharts().render();},200)}};
 var vueMounted = function(){}

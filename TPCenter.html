@@ -2,7 +2,7 @@
 <!--代码由www.magicalcoder.com可视化布局器拖拽生成 资源请自行下载到本地-->
 <head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-<title>注册界面</title>
+<title>教师个人中心</title>
 <link href="https://lib.baomitu.com/element-ui/2.10.1/theme-chalk/index.css" rel="stylesheet"/>
 <link href="http://lowcode.magicalcoder.com/magicalcoder/assets/drag/ui/magicalcoder/1.1.0/magicalcoder.css" rel="stylesheet"/>
 <!-- 如果要兼容ie8及以前版本 请打开注释--> <!-- <script src="http://www.magicalcoder.com/assets/ui/element/2.10.1/browser.min.js"></script><script src="http://www.magicalcoder.com/assets/ui/element/2.10.1/browser-polyfill.min.js"></script>-->
@@ -20,23 +20,17 @@
 
 </head>
 <body style="">
-<div id="magicalDragScene" class="mc-root mc-ui-absolute-pane"><template>
-	<i style="position: absolute; left: 20.5414%; top: 18.8571%; font-family: 楷体; font-size: 33px; width: 19.7452%;">考试管理系统</i>
-	<el-input style="position: absolute; left: 47.6115%; top: 33.2857%; width: 25.4777%;" v-model="input" placeholder="请输入的学号/工号"></el-input>
-	<el-input style="position: absolute; left: 47.7707%; top: 43.2857%; width: 25.4777%;" v-model="input" placeholder="请输入你的密码" show-password></el-input>
-	<el-radio-group style="position: absolute; left: 49.7611%; top: 52.8571%; height: 16px;" v-model="radioGroup">
-		<el-radio label="1">学生</el-radio>
-		<el-radio label="2">老师</el-radio>
-	</el-radio-group>
-	<el-button style="position: absolute; left: 48.8076%; top: 60.1429%;">注册</el-button>
-	<i style="position: absolute; left: 42.5955%; top: 34.6429%; width: 4.85669%;">账户：</i>
-	<i id="uuid06c333dc-624d-4579-911a-3596b593b888" style="position: absolute; left: 42.7548%; top: 44.7857%; width: 4.85669%;">密码：</i>
-</template></div>
+<div id="magicalDragScene" class="mc-root mc-ui-absolute-pane" style="font-size: 15px;">
+	<el-button id="uuid373f3b09-d9f6-42b8-8b97-8ca3dbe37a06" style="position: absolute; left: 26%; top: 29%; width: 20%; height: 90px; font-size: 20px;">成绩上传修改</el-button>
+	<el-button id="uuid785143c2-3721-472a-9228-79e6640ef55c" style="position: absolute; left: 50%; top: 29%; width: 20%; height: 90px; font-size: 20px;">学生报名信息修改</el-button>
+	<el-button id="uuid86f686c6-f244-4443-8d49-8c3016878750" style="position: absolute; left: 25%; top: 53.5714%; width: 20%; height: 90px; font-size: 20px;">修改删除考生</el-button>
+	<el-button id="uuid497eed46-72bd-4d69-9425-b111f2f05b93" style="position: absolute; left: 50%; top: 53.5714%; width: 20%; height: 90px; font-size: 20px;">注销</el-button>
+	<i style="position: absolute; left: 44%; top: 15.1429%; font-size: 30px; width: 15.8188%; height: 47px;">教师个人中心</i>
+</div>
 <script>
 //ajax库采用axios
 //调试:打开浏览器控制台(F12),在代码中某行增加 debugger 即可调试
-var vueData = {input : "",/*别删我*/
-radioGroup : ""};
+var vueData = {};
 var vueMethod = {focus : function (e) {try {_t.fastKey.focusElem(e);}catch(e) {}},/*别删我*/
 _tabClick : function(){setTimeout(function(){new McECharts().render();},200)}};
 var vueMounted = function(){}

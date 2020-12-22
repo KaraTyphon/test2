@@ -2,9 +2,9 @@
 <!--代码由www.magicalcoder.com可视化布局器拖拽生成 资源请自行下载到本地-->
 <head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-<title>个人中心</title>
+<title>学生考试查询</title>
 <link href="https://lib.baomitu.com/element-ui/2.10.1/theme-chalk/index.css" rel="stylesheet"/>
-<link href="D:\vip3.0try\html\magicalcoder\assets\drag\ui\magicalcoder\1.1.0\magicalcoder.css" rel="stylesheet"/>
+<link href="http://lowcode.magicalcoder.com/magicalcoder/assets/drag/ui/magicalcoder/1.1.0/magicalcoder.css" rel="stylesheet"/>
 <!-- 如果要兼容ie8及以前版本 请打开注释--> <!-- <script src="http://www.magicalcoder.com/assets/ui/element/2.10.1/browser.min.js"></script><script src="http://www.magicalcoder.com/assets/ui/element/2.10.1/browser-polyfill.min.js"></script>-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/json3/3.3.3/json3.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.6.0/echarts.min.js"></script>
@@ -12,19 +12,15 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
 <script src="https://lib.baomitu.com/element-ui/2.10.1/index.js"></script>
-<script src="D:\vip3.0try\html\magicalcoder\assets\drag\ui\magicalcoder\1.1.0\magicalcoder.js"></script>
+<script src="http://www.magicalcoder.com/assets/js/common.js"></script>
+<script src="http://lowcode.magicalcoder.com/magicalcoder/assets/drag/ui/magicalcoder/1.1.0/magicalcoder.js"></script>
 <style>
 
 </style>
 
 </head>
 <body style="">
-<div id="magicalDragScene" class="mc-root mc-ui-absolute-pane" v-if="true">
-	<i style="position: absolute; left: 35%; top: 22%; width: 4.85669%;">姓名：</i>
-	<i style="position: absolute; left: 35%; top: 29%; width: 4.85669%;">性别：</i>
-	<i id="uuid2443cc58-f370-48c2-8eb0-a2a9e294bcc9" style="position: absolute; left: 34%; top: 52%; width: 6.6879%;">身份证号：</i>
-	<i id="uuid90792664-884a-4e36-a9f9-899a83871390" style="position: absolute; left: 35%; top: 37%; width: 5.01592%;">学号：</i>
-	<i id="uuide2f8c287-1fd2-486b-a48e-7bc73cdcb0a6" style="position: absolute; left: 35%; top: 44%; width: 5.01592%;">院系：</i>
+<div id="magicalDragScene" class="mc-root mc-ui-absolute-pane"><template>
 	<el-menu style="position: absolute; left: 11.3854%; top: 19.4286%; height: 329px;" mode="vertical" :collapse-transition="false" :collapse="false" unique-opened>
 		<el-menu-item class="mc-ui-flex-center" index="3">首页</el-menu-item>
 		<el-menu-item id="uuid7ae4d9ae-a8cb-420f-b449-1c48b8287505" class="mc-ui-flex-center" index="uuid25b415cb-ec82-4311-bce6-edc3bc3ed891">我的信息</el-menu-item>
@@ -38,31 +34,26 @@
 		<el-menu-item id="uuidf47a08c0-0dde-4fd4-af8d-4f7de20a21a9" class="mc-ui-flex-center" index="uuidb0582144-5b74-4a97-9842-994e22d8c03e">报名记录</el-menu-item>
 		<el-menu-item id="uuid0753a7f7-a518-4c29-8cff-78bd5a40a6de" class="mc-ui-flex-center" index="uuid44c15f5a-6ab5-4861-bfd8-1b79bf9bdbdc">账户安全</el-menu-item>
 	</el-menu>
-	<el-tag style="position: absolute; left: 47%; top: 28%;">我的性别</el-tag>
-	<el-tag style="position: absolute; left: 45%; top: 36%; width: 14.4904%;">我的学号</el-tag>
-	<el-tag style="position: absolute; left: 45%; top: 44%; width: 14.4904%;">我的院系</el-tag>
-	<el-tag style="position: absolute; left: 45%; top: 51%; width: 17.9936%;">我的身份证号</el-tag>
-	<i style="position: absolute; left: 34%; top: 59%; width: 6.36943%;">准考证号：</i>
-	<el-tag style="position: absolute; left: 45%; top: 58%; width: 17.9936%;">我的准考证号</el-tag>
-	<i style="position: absolute; left: 72.0541%; top: 17.2857%; font-size: 25px;">我的信息</i>
-	<el-tag style="position: absolute; left: 46.9745%; top: 21%;">我的姓名</el-tag>
-	<el-button style="position: absolute; left: 40.3662%; top: 76.4286%;">修改信息</el-button>
-	<i id="uuid730c1e41-53d2-47eb-bb60-0b3e1a03e89e" style="position: absolute; left: 33.8376%; top: 67.2857%; width: 6.36943%;">考试次数：</i>
-	<el-tag style="position: absolute; left: 44.7452%; top: 67%; width: 17.9936%;">我的考试次数</el-tag>
-	<el-image style="width: 18.442%; height: 337px; position: absolute; left: 67.806%; top: 26.4286%;" src="武"></el-image>
-</div>
+	<i style="position: absolute; left: 44.9841%; top: 12.8571%; font-size: 25px;">我的报名</i>
+	<i style="position: absolute; left: 31.449%; top: 48.5%;">我的准考证号：</i>
+	<i style="position: absolute; left: 31.6083%; top: 59%;">我的座位号：</i>
+	<i style="position: absolute; left: 31.449%; top: 69.4286%;">是否缴费：</i>
+	<i style="position: absolute; left: 30.2946%; top: 38.5714%; width: 12.5%;">该考试的考试地点：</i>
+	<i style="position: absolute; left: 31.6481%; top: 28.1429%; width: 9.79299%;">我目前的考试：</i>
+	<el-input style="position: absolute; left: 58.6783%; top: 26.7857%; width: 25.6369%;" v-model="input" placeholder="请输入内容" autosize></el-input>
+	<el-input id="uuidaea28aeb-8474-4687-a065-348bcb545967" style="position: absolute; left: 58.6783%; top: 37.2143%; width: 25.6369%;" v-model="input" placeholder="请输入内容" autosize></el-input>
+	<el-radio-group style="position: absolute; left: 58.3599%; top: 69.4286%;" v-model="radioGroup">
+		<el-radio label="1">已缴费</el-radio>
+		<el-radio label="2">未缴费</el-radio>
+	</el-radio-group>
+	<el-input id="uuid3827fe3b-3f02-4630-bfc2-785ec74f89a3" style="position: absolute; left: 58.3599%; top: 57.7857%; width: 25.6369%;" v-model="input" placeholder="请输入内容" autosize></el-input>
+	<el-input id="uuid761a970a-562d-435b-b7cb-aaa7b9b07bbe" style="position: absolute; left: 58.2803%; top: 47.3571%; width: 25.6369%;" v-model="input" placeholder="请输入内容" autosize></el-input>
+	<el-button style="position: absolute; left: 58.6645%; top: 72.8571%;">前往缴费页面</el-button>
+</template></div>
 <script>
 //ajax库采用axios
 //调试:打开浏览器控制台(F12),在代码中某行增加 debugger 即可调试
-var vueData = {stepActive : 0,/*别删我*/
-tableList : [{}],/*别删我*/
-select : "",/*别删我*/
-pageTotal : 100,/*别删我*/
-currentPage : 1,/*别删我*/
-progress : 50,/*别删我*/
-input : "",/*别删我*/
-kaiGuan : false,/*别删我*/
-checkboxGroup : [],/*别删我*/
+var vueData = {input : "",/*别删我*/
 radioGroup : ""};
 var vueMethod = {focus : function (e) {try {_t.fastKey.focusElem(e);}catch(e) {}},/*别删我*/
 _tabClick : function(){setTimeout(function(){new McECharts().render();},200)}};
